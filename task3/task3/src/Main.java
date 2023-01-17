@@ -7,18 +7,18 @@ public class Main {
         int num1 = Integer.parseInt(s1);
         int num2 = Integer.parseInt(s2);
 
-        System.out.println(num1 + " + " + num2 + " = " + addNumbers(num1,num2));
-        System.out.println(num1 + " - " + num2 + " = " + substractNumbers(num1,num2));
-        System.out.println(num1 + " * " + num2 + " = " + multiplyNumbers(num1,num2));
-        System.out.println(num1 + " / " + num2 + " = " + divideNumbers(num1,num2));
-        System.out.println(num1 + " mod " + num2 + " = " + divideNumbers(num1,num2));
+        System.out.println(String.format("Add: %d + %d = %d ", num1, num2, addNumbers(num1,num2)));
+        System.out.println(String.format("Subtract: %d - %d = %d ", num1, num2, substractNumbers(num1,num2)));
+        System.out.println(String.format("Multiply: %d * %d = %d ", num1, num2, multiplyNumbers(num1,num2)));
+        System.out.println(String.format("Divide: %d / %d = %d ", num1, num2, divideNumbers(num1,num2)));
+        System.out.println(String.format("Mod: %d mod %d = %d ", num1, num2, mod(num1,num2)));
+
 
     }
 
     private static String getInput(String prompt){
         System.out.println(prompt);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
+        return new Scanner(System.in).nextLine();
     }
     private static int addNumbers(int d1, int d2){
         return d1 + d2;
